@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<title> вторая страница </title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icom" href="images/logo.jpg">
+<link rel="stylesheet" href="style.css" media="all">
+ <style>
+   fieldset { 
+    width: 200px; /* Ширина */ 
+    padding: 0 10px; /* Поля */
+   }
+   fieldset:nth-child(odd) { 
+    float: left; /* Обтекание для всех нечётных элементов */ 
+   }
+  </style>
+  <script>
+   function agreeForm(f) {
+    // Если поставлен флажок, снимаем блокирование кнопки
+    if (f.agree.checked) f.submit.disabled = 0 
+    // В противном случае вновь блокируем кнопку
+    else f.submit.disabled = 1
+   }
+  </script>
+</head>
+<body>
+	<div class ="info">
+<h2 align="center"> Опросник </h2>
+
+	<div class="spisok">
+	<p>Укажите цвет фона: <input type="color" name="bg" value="#AF3BEF">
+   <input type="submit" value="Выбрать"></p></div>
+
+    <div class="spisok">
+    	<p> Выберите имя коту: <br>
+        <select name="select" size="2" >
+    <option selected value="s1"> Игорь </option>
+    <option value="s2">Гена</option>
+    <option value="s3">Анатолий</option>
+    <option value="s4">Мешок Шерсти</option>
+   </select>
+   <p></p>
+   <input type="submit" value="Отправить"></p> 
+</div>
+
+<div class="block1">
+<div class="spisok">
+  <p>Какие породы кошек вы любите?</p>
+   <p><input type="checkbox" name="a" value="3tsveta" checked> Трехцветный</p>
+   <p><input type="checkbox" name="a" value="Brodyaga"> Бродячий</p>
+   <p><input type="checkbox" name="a" value="Meinkun"> Мейн кун</p>
+   <p><input type="checkbox" name="a" value="Sfinx"> Те, что без шерсти</p>
+   <p><input type="checkbox" name="a" value="Kot"> У меня на них аллергия</p>
+   <p><input type="submit" value="Отправить"></p>
+</div>
+</div>
+
+<div class="block1">
+	<div class="spisok">
+<p>Сколько животных у Вас было?</p>
+   <p><input type="radio" name="game" value="0" checked> Нисколько, родители не разрешают :(</p>
+   <p><input type="radio" name="game" value="1"> Один</p>
+   <p><input type="radio" name="game" value="2"> Два</p>
+   <p><input type="radio" name="game" value="3"> Много</p>
+   <p><input type="image" src="images/knopka3.png" alt="OK" style="width:50px"></p>
+   	</div>
+   </div>
+</p>
+
+<p><h3>Если Вы хотите увидеть на нашем сайте Вашего питомца, присылайте фото!</h3></p>
+   <p><input type="file" name="photo" multiple accept="image/*,image/jpeg">
+   <input type="submit" value="Отправить"></p>
+
+
+<!-- <p><input placeholder="Ваше имя" name="user"></p>
+   <p><input type="url" placeholder="Сайт" name="site" required></p>
+   <p><input type="submit" value="Отправить"></p> -->
+   <div class="spisok">
+   <p><input type="search" name="q" placeholder="Поиск по сайту"> 
+   <input type="submit" value="Найти"></p>
+   </div>
+<div class="spisok">
+	<form>
+		<p>Ваше имя: <input name="login"></p>
+   <p>Телефон в формате 8xxx-xxx-xx-xx:  <input type="tel" name="tel" 
+   pattern="8[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"></p>
+   <p><input type="submit" value="Отправить"></p>	
+ </form>
+</div>
+<div class="kontur">
+<fieldset>
+    <legend>Вход на сайт</legend>
+   
+    <p>Логин: <input name="login"></p>
+    <p>Пароль: <input type="password" name="pass"></p>
+    <p><input type="submit" value="Вход"></p>
+  
+</fieldset>
+ </div>
+<div class="kontur">
+ <fieldset>
+    <p>Имя:</p>
+    <p><input name="name" tabindex="1"></p>
+   </fieldset>
+   <fieldset>
+    <p>Фамилия:</p>
+    <p><input name="lastname" tabindex="3"></p> 
+   </fieldset>
+   <fieldset>
+    <p>Телефон:</p>
+    <p><input name="tel" type="tel" tabindex="2"></p> 
+   </fieldset>
+   <fieldset>
+    <p>Пол:</p>
+    <p><select name="gender" tabindex="4">
+     <option selected>Мужской</option>
+     <option>Женский</option>
+    </select></p>
+   </fieldset>
+    <div class="spisok">
+    <form >
+   <p align="center"><textarea cols="30" rows="4" disabled>
+    Лицензионное соглашение.
+    (Необязательно к прочтению) 
+   </textarea></p>
+   <p align="center"><input type="checkbox" name="agree" onclick="agreeForm(this.form)"> 
+    Я согласен со всеми условиями</p>
+   <p align="center"><input type="submit" name="submit" value="Далее" disabled></p>
+  </form>
+</div>
+
+   <fieldset>
+    <legend>Вход на сайт</legend>
+    <p><input name="login" autofocus></p>
+    <p><input type="password" name="pass"></p>
+    <p><input type="submit" value="Вход"></p>
+   </fieldset>
+
+<div class="block1">
+  <p><input name="login" placeholder="Логин"></p>
+   <p><input name="pass" type="password" placeholder="Пароль"></p>
+   <p><input type="submit" value="Вход"></p>
+</div>
+<div class="spisok">
+  <form>
+   <p>Введите IP-адрес:</p>
+   <p><input name="ip" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}"></p>
+   <p><input type="submit" value="Отправить"></p>
+  </form>
+</div>
+<div class="spisok">
+   <form>
+   <p>Логин: <input name="login" required></p>
+   <p>Пароль: <input type="password" name="login" required></p>
+   <p><input type="submit" value="Вход"></p>
+  </form>
+</div>
+</body>
+</html>
